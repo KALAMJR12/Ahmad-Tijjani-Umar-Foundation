@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Volunteer with Ahmad Tijjani Foundation - Make a difference in youth development">
+    <title>Volunteer - Ahmad Tijjani Foundation</title>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- HEADER AND NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">Ahmad Tijjani Foundation</a>
+                    </div>
+                    
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="index.html#about" class="nav-link">About</a></li>
+                        <li><a href="index.html#programs" class="nav-link">Programs</a></li>
+                        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                        <li><a href="donate.html" class="nav-link">Donate</a></li>
+                        <li><a href="volunteer.html" class="nav-link active">Volunteer</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- VOLUNTEER PAGE HEADER -->
+    <section class="page-header volunteer-header">
+        <div class="container">
+            <h1>Volunteer With Us</h1>
+            <p>Join our team of passionate individuals making a difference in young people's lives</p>
+        </div>
+    </section>
+
+    <!-- VOLUNTEER INFO SECTION -->
+    <section class="volunteer-info">
+        <div class="container">
+            
+            <div class="volunteer-intro">
+                <h2>Why Volunteer?</h2>
+                <p>
+                    Volunteering with the Ahmad Tijjani Foundation is more than just giving your time – it's about 
+                    creating lasting impact in the lives of young people. Whether you have a few hours a week or can 
+                    commit to longer-term projects, your skills and passion can help empower the next generation.
+                </p>
+            </div>
+
+            <!-- Volunteer Opportunities -->
+            <div class="opportunities-grid">
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Teaching & Mentoring</h3>
+                    <p>Share your knowledge and experience by teaching skills workshops or mentoring young people one-on-one.</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Event Support</h3>
+                    <p>Help organize and run community events, workshops, seminars, and youth programs.</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Tech & Digital</h3>
+                    <p>Use your technical skills in web design, social media management, or digital marketing.</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>Help with writing, photography, video production, or graphic design for our communications.</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Outreach</h3>
+                    <p>Connect with communities to raise awareness and recruit program participants.</p>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Administrative Support</h3>
+                    <p>Assist with office tasks, data entry, filing, and general administrative duties.</p>
+                </div>
+                
+            </div>
+
+            <!-- Volunteer Benefits -->
+            <div class="volunteer-benefits">
+                <h2>What You'll Gain</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Certificate of Service</h4>
+                        <p>Receive official recognition for your volunteer hours</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Skill Development</h4>
+                        <p>Learn new skills and gain valuable experience</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>Networking</h4>
+                        <p>Connect with like-minded professionals and mentors</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <h4>Personal Fulfillment</h4>
+                        <p>Make a meaningful difference in young lives</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VOLUNTEER APPLICATION FORM -->
+    <section class="volunteer-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Volunteer Application Form</h2>
+                <p class="form-intro">Fill out the form below and we'll get back to you within 48 hours</p>
+                
+                <!-- Volunteer Form - Integrated with Netlify Forms -->
+                <form name="volunteer" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="volunteer-form">
+                    
+                    <!-- Hidden fields for Netlify -->
+                    <input type="hidden" name="form-name" value="volunteer">
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+                    
+                    <!-- Personal Information -->
+                    <h3 class="form-section-title">Personal Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="v-firstname">First Name *</label>
+                            <input type="text" id="v-firstname" name="firstname" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="v-lastname">Last Name *</label>
+                            <input type="text" id="v-lastname" name="lastname" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="v-email">Email Address *</label>
+                            <input type="email" id="v-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="v-phone">Phone Number *</label>
+                            <input type="tel" id="v-phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="v-age">Age *</label>
+                            <input type="number" id="v-age" name="age" min="16" max="100" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="v-gender">Gender</label>
+                            <select id="v-gender" name="gender">
+                                <option value="">Prefer not to say</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="v-address">Address *</label>
+                        <textarea id="v-address" name="address" rows="2" required></textarea>
+                    </div>
+                    
+                    <!-- Volunteer Details -->
+                    <h3 class="form-section-title">Volunteer Details</h3>
+                    
+                    <div class="form-group">
+                        <label for="v-area">Area of Interest *</label>
+                        <select id="v-area" name="area-of-interest" required>
+                            <option value="">Select an area...</option>
+                            <option value="teaching">Teaching & Mentoring</option>
+                            <option value="events">Event Support</option>
+                            <option value="tech">Tech & Digital</option>
+                            <option value="content">Content Creation</option>
+                            <option value="outreach">Community Outreach</option>
+                            <option value="admin">Administrative Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="v-availability">Availability *</label>
+                        <select id="v-availability" name="availability" required>
+                            <option value="">Select...</option>
+                            <option value="weekdays">Weekdays</option>
+                            <option value="weekends">Weekends</option>
+                            <option value="both">Both Weekdays & Weekends</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="v-hours">Hours Per Week You Can Commit *</label>
+                        <select id="v-hours" name="hours-per-week" required>
+                            <option value="">Select...</option>
+                            <option value="1-5">1-5 hours</option>
+                            <option value="6-10">6-10 hours</option>
+                            <option value="11-20">11-20 hours</option>
+                            <option value="20+">20+ hours</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="v-skills">Skills & Expertise *</label>
+                        <textarea id="v-skills" name="skills" rows="4" 
+                            placeholder="Please list your relevant skills, qualifications, or experience..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="v-experience">Previous Volunteer Experience</label>
+                        <textarea id="v-experience" name="previous-experience" rows="4" 
+                            placeholder="Tell us about any previous volunteer work or community service..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="v-motivation">Why do you want to volunteer with us? *</label>
+                        <textarea id="v-motivation" name="motivation" rows="5" 
+                            placeholder="Share your motivations and what you hope to achieve..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="v-start">When can you start? *</label>
+                        <input type="date" id="v-start" name="start-date" required>
+                    </div>
+                    
+                    <!-- References -->
+                    <h3 class="form-section-title">Reference (Optional)</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="v-ref-name">Reference Name</label>
+                            <input type="text" id="v-ref-name" name="reference-name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="v-ref-phone">Reference Phone</label>
+                            <input type="tel" id="v-ref-phone" name="reference-phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="v-ref-relationship">Relationship to Reference</label>
+                        <input type="text" id="v-ref-relationship" name="reference-relationship" 
+                            placeholder="e.g., Former Employer, Teacher, etc.">
+                    </div>
+                    
+                    <!-- Agreement -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agreement" required>
+                            <span>I confirm that the information provided is accurate and I agree to the foundation's volunteer guidelines *</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary submit-btn">Submit Application</button>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-section">
+                    <h4>Ahmad Tijjani Foundation</h4>
+                    <p>Empowering youth and building sustainable communities through education, skills development, and social programs.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ahmad Tijjani Foundation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahmad Tijjani Foundation - Empowering youth through education, skills development, and community programs">
+    <title>Ahmad Tijjani Foundation - Youth Development</title>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- HEADER AND NAVIGATION -->
+    <!-- TO UPDATE: Change logo text or add logo image, modify navigation links -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo - Replace text with <img> tag for custom logo -->
+                    <div class="logo">
+                        <a href="#home">Ahmad Tijjani Umar Foundation</a>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="index.html#about" class="nav-link">About</a></li>
+                        <li><a href="index.html#programs" class="nav-link">Programs</a></li>
+                        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                        <li><a href="donate.html" class="nav-link">Donate</a></li>
+                        <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <!-- Mobile Menu Toggle Button -->
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION WITH SLIDESHOW -->
+    <!-- TO UPDATE: Replace hero images in the JavaScript file (script.js) -->
+    <section class="hero" id="home">
+        <div class="hero-slideshow">
+            <!-- Slides will be dynamically added by JavaScript -->
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Empowering Youth, Building Futures</h1>
+                <p class="hero-subtitle">Join us in creating positive change through education, skills development, and community programs</p>
+                <div class="hero-buttons">
+                    <a href="#programs" class="btn btn-primary">Explore Our Programs</a>
+                    <a href="donate.html" class="btn btn-secondary">Donate Now</a>
+                    <a href="volunteer.html" class="btn btn-outline">Volunteer With Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slideshow Controls -->
+        <div class="slideshow-controls">
+            <button class="slide-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slide-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="slideshow-dots" id="slideshow-dots"></div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <!-- TO UPDATE: Modify mission, vision text and replace about image -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=400&fit=crop" alt="Ahmad Tijjani Foundation Team">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>
+                        The Ahmad Tijjani Foundation is dedicated to empowering young people through comprehensive 
+                        development programs that focus on education, skills acquisition, and character building. 
+                        We believe that investing in youth is investing in the future of our community.
+                    </p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>
+                        To create a generation of self-reliant, educated, and socially responsible young leaders 
+                        who will contribute positively to society and drive sustainable development in their communities.
+                    </p>
+                    
+                    <h3>Our Impact</h3>
+                    <p>
+                        Since our inception, we have reached over 1,000 young people through various programs including 
+                        vocational training, leadership development, educational scholarships, and community service 
+                        initiatives. Our programs have helped participants gain valuable skills, access education, 
+                        and build brighter futures.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <!-- TO UPDATE: Add/remove programs, change descriptions, modify apply links -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Programs</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Explore our current and upcoming youth development initiatives</p>
+            </div>
+            
+            <div class="programs-grid">
+                
+                <!-- Program Card 1 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="program-title">Educational Scholarships</h3>
+                    <p class="program-description">
+                        Supporting talented students from underprivileged backgrounds with scholarships 
+                        to pursue their educational dreams from primary through university level.
+                    </p>
+                    <div class="program-status">Currently Open</div>
+                    <button class="btn btn-secondary apply-btn" data-program="Educational Scholarships">Apply Now</button>
+                </div>
+                
+                <!-- Program Card 2 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="program-title">Tech Skills Training</h3>
+                    <p class="program-description">
+                        Hands-on training in web development, graphic design, and digital marketing 
+                        to equip youth with in-demand skills for the modern workforce.
+                    </p>
+                    <div class="program-status">Currently Open</div>
+                    <button class="btn btn-secondary apply-btn" data-program="Tech Skills Training">Apply Now</button>
+                </div>
+                
+                <!-- Program Card 3 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="program-title">Leadership Development</h3>
+                    <p class="program-description">
+                        Comprehensive leadership training program focusing on communication, teamwork, 
+                        problem-solving, and community engagement for emerging youth leaders.
+                    </p>
+                    <div class="program-status">Starting Soon</div>
+                    <button class="btn btn-secondary apply-btn" data-program="Leadership Development">Apply Now</button>
+                </div>
+                
+                <!-- Program Card 4 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="program-title">Vocational Training</h3>
+                    <p class="program-description">
+                        Practical skills training in trades such as tailoring, carpentry, electrical work, 
+                        and more to help youth become self-employed or gain meaningful employment.
+                    </p>
+                    <div class="program-status">Currently Open</div>
+                    <button class="btn btn-secondary apply-btn" data-program="Vocational Training">Apply Now</button>
+                </div>
+                
+                <!-- Program Card 5 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="program-title">Community Service</h3>
+                    <p class="program-description">
+                        Volunteer opportunities for youth to give back to their communities through 
+                        environmental projects, elderly care, and educational outreach programs.
+                    </p>
+                    <div class="program-status">Ongoing</div>
+                    <button class="btn btn-secondary apply-btn" data-program="Community Service">Apply Now</button>
+                </div>
+                
+                <!-- Program Card 6 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="program-title">Entrepreneurship Program</h3>
+                    <p class="program-description">
+                        Business skills training, mentorship, and seed funding opportunities for 
+                        aspiring young entrepreneurs to start and grow their own businesses.
+                    </p>
+                    <div class="program-status">Starting Q1 2026</div>
+                    <button class="btn btn-secondary apply-btn" data-program="Entrepreneurship Program">Apply Now</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <!-- TO UPDATE: Replace gallery images in the JavaScript file (script.js) -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Impact in Action</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Photos from our programs and community activities</p>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery images will be dynamically added by JavaScript -->
+            </div>
+            
+            <!-- Gallery Modal for enlarged view -->
+            <div class="gallery-modal" id="gallery-modal">
+                <span class="modal-close" id="modal-close">&times;</span>
+                <img class="modal-content" id="modal-image">
+                <div class="modal-caption" id="modal-caption"></div>
+                <button class="modal-nav modal-prev" id="modal-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-nav modal-next" id="modal-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <!-- TO UPDATE: Modify contact information and form fields as needed -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Have questions or want to get involved? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-content">
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Foundation Street<br>Community Center<br>Kaduna State, Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+234 7031895051</p>
+                            <p>+234 9030578183</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@ahmadtijjanifoundation.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form - Integrated with Netlify Forms -->
+                <div class="contact-form-wrapper">
+                    <form name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                        <!-- Hidden field for Netlify Forms -->
+                        <input type="hidden" name="form-name" value="contact">
+                        
+                        <!-- Honeypot field for spam protection -->
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+                        
+                        <div class="form-group">
+                            <label for="contact-name">Full Name *</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email">Email Address *</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" name="subject">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM APPLICATION MODAL -->
+    <!-- This modal appears when users click "Apply Now" buttons -->
+    <div class="modal" id="application-modal">
+        <div class="modal-dialog">
+            <div class="modal-content-wrapper">
+                <div class="modal-header">
+                    <h3 class="modal-title">Program Application</h3>
+                    <button class="modal-close-btn" id="close-modal">&times;</button>
+                </div>
+                
+                <div class="modal-body">
+                    <!-- Application Form - Integrated with Netlify Forms -->
+                    <form name="program-application" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="application-form">
+                        <!-- Hidden field for Netlify Forms -->
+                        <input type="hidden" name="form-name" value="program-application">
+                        
+                        <!-- Honeypot field for spam protection -->
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+                        
+                        <!-- Hidden field to store selected program -->
+                        <input type="hidden" id="selected-program" name="program">
+                        
+                        <div class="form-group">
+                            <label for="app-name">Full Name *</label>
+                            <input type="text" id="app-name" name="applicant-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="app-email">Email Address *</label>
+                            <input type="email" id="app-email" name="applicant-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="app-phone">Phone Number *</label>
+                            <input type="tel" id="app-phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="app-age">Age *</label>
+                            <input type="number" id="app-age" name="age" min="10" max="100" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="app-program-display">Applying For *</label>
+                            <input type="text" id="app-program-display" disabled>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="app-education">Current Education Level *</label>
+                            <select id="app-education" name="education-level" required>
+                                <option value="">Select...</option>
+                                <option value="primary">Primary School</option>
+                                <option value="secondary">Secondary School</option>
+                                <option value="tertiary">University/College</option>
+                                <option value="graduate">Graduate</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="app-motivation">Why do you want to join this program? *</label>
+                            <textarea id="app-motivation" name="motivation" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="app-additional">Additional Information</label>
+                            <textarea id="app-additional" name="additional-info" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <!-- TO UPDATE: Update social media links and copyright year -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-section">
+                    <h4>Ahmad Tijjani Foundation</h4>
+                    <p>Empowering youth and building sustainable communities through education, skills development, and social programs.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ahmad Tijjani Umar Foundation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Ahmad Tijjani Foundation - Make a donation to empower youth">
+    <title>Donate - Ahmad Tijjani Foundation</title>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Paystack Inline Script -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    
+    <!-- Flutterwave Inline Script -->
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+</head>
+<body>
+    
+    <!-- HEADER AND NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">Ahmad Tijjani Foundation</a>
+                    </div>
+                    
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="index.html#about" class="nav-link">About</a></li>
+                        <li><a href="index.html#programs" class="nav-link">Programs</a></li>
+                        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                        <li><a href="donate.html" class="nav-link active">Donate</a></li>
+                        <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- DONATE PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Support Our Mission</h1>
+            <p>Your generosity helps us empower youth and build stronger communities</p>
+        </div>
+    </section>
+
+    <!-- DONATION SECTION -->
+    <!-- TO UPDATE: Update bank details, API keys in the script section below -->
+    <section class="donate-section">
+        <div class="container">
+            
+            <!-- Intro Text -->
+            <div class="donate-intro">
+                <h2>Why Your Donation Matters</h2>
+                <p>
+                    Every contribution, no matter the size, makes a significant impact in the lives of young people. 
+                    Your donation helps provide scholarships, vocational training, leadership development programs, 
+                    and essential resources for youth in our community.
+                </p>
+            </div>
+
+            <!-- Donation Options -->
+            <div class="donation-options">
+                
+                <!-- Bank Transfer Option -->
+                <div class="donation-card">
+                    <div class="donation-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Direct Bank Transfer</h3>
+                    <p>Transfer directly to our foundation account</p>
+                    
+                    <div class="bank-details">
+                        <div class="bank-info">
+                            <strong>Bank Name:</strong>
+                            <span>First Bank of Nigeria</span>
+                        </div>
+                        <div class="bank-info">
+                            <strong>Account Name:</strong>
+                            <span>Ahmad Tijjani Foundation</span>
+                        </div>
+                        <div class="bank-info">
+                            <strong>Account Number:</strong>
+                            <span class="account-number">1234567890</span>
+                            <button class="copy-btn" onclick="copyAccountNumber('1234567890')">
+                                <i class="fas fa-copy"></i> Copy
+                            </button>
+                        </div>
+                        <div class="bank-info">
+                            <strong>Swift Code:</strong>
+                            <span>FBNINGLA</span>
+                        </div>
+                    </div>
+                    
+                    <p class="note">
+                        <i class="fas fa-info-circle"></i>
+                        Please send proof of payment to <strong>donations@ahmadtijjanifoundation.org</strong>
+                    </p>
+                </div>
+
+                <!-- Online Payment Options -->
+                <div class="donation-card online-payment">
+                    <div class="donation-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Pay Online</h3>
+                    <p>Make a secure online donation via card, bank transfer, or mobile money</p>
+                    
+                    <!-- Donation Amount Form -->
+                    <form id="donation-form" class="payment-form">
+                        <div class="form-group">
+                            <label for="donor-name">Your Name *</label>
+                            <input type="text" id="donor-name" placeholder="Full Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donor-email">Email Address *</label>
+                            <input type="email" id="donor-email" placeholder="your@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donor-phone">Phone Number</label>
+                            <input type="tel" id="donor-phone" placeholder="080XXXXXXXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donation-amount">Donation Amount (NGN) *</label>
+                            <input type="number" id="donation-amount" placeholder="5000" min="100" required>
+                        </div>
+                        
+                        <!-- Suggested Amounts -->
+                        <div class="suggested-amounts">
+                            <button type="button" class="amount-btn" onclick="setAmount(1000)">₦1,000</button>
+                            <button type="button" class="amount-btn" onclick="setAmount(5000)">₦5,000</button>
+                            <button type="button" class="amount-btn" onclick="setAmount(10000)">₦10,000</button>
+                            <button type="button" class="amount-btn" onclick="setAmount(50000)">₦50,000</button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donation-purpose">Purpose (Optional)</label>
+                            <select id="donation-purpose">
+                                <option value="">General Donation</option>
+                                <option value="scholarships">Educational Scholarships</option>
+                                <option value="tech-training">Tech Skills Training</option>
+                                <option value="leadership">Leadership Development</option>
+                                <option value="vocational">Vocational Training</option>
+                                <option value="community">Community Service</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Payment Gateway Buttons -->
+                        <div class="payment-buttons">
+                            <button type="button" class="btn btn-primary" onclick="payWithPaystack()">
+                                <i class="fas fa-lock"></i> Pay with Paystack
+                            </button>
+                            <button type="button" class="btn btn-secondary" onclick="payWithFlutterwave()">
+                                <i class="fas fa-lock"></i> Pay with Flutterwave
+                            </button>
+                        </div>
+                        
+                        <p class="secure-note">
+                            <i class="fas fa-shield-alt"></i>
+                            Your payment is secure and encrypted
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Impact Section -->
+            <div class="impact-section">
+                <h2>Your Impact</h2>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-icon">₦5,000</div>
+                        <p>Provides school supplies for one student for a semester</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">₦25,000</div>
+                        <p>Sponsors one youth for a vocational training program</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">₦100,000</div>
+                        <p>Provides a full scholarship for one student for one year</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">₦500,000</div>
+                        <p>Funds a complete community development project</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-section">
+                    <h4>Ahmad Tijjani Foundation</h4>
+                    <p>Empowering youth and building sustainable communities through education, skills development, and social programs.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ahmad Tijjani Foundation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // ========================================
+        // DONATION PAYMENT INTEGRATION
+        // ========================================
+        
+        // TO UPDATE: Replace with your actual API keys from Paystack and Flutterwave
+        const PAYSTACK_PUBLIC_KEY = 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // Replace with your Paystack public key
+        const FLUTTERWAVE_PUBLIC_KEY = 'FLWPUBK_TEST-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-X'; // Replace with your Flutterwave public key
+        
+        // Set suggested amount
+        function setAmount(amount) {
+            document.getElementById('donation-amount').value = amount;
+        }
+        
+        // Copy account number to clipboard
+        function copyAccountNumber(accountNumber) {
+            navigator.clipboard.writeText(accountNumber).then(() => {
+                alert('Account number copied to clipboard!');
+            }).catch(() => {
+                alert('Failed to copy. Please copy manually: ' + accountNumber);
+            });
+        }
+        
+        // Validate donation form
+        function validateDonationForm() {
+            const name = document.getElementById('donor-name').value;
+            const email = document.getElementById('donor-email').value;
+            const amount = document.getElementById('donation-amount').value;
+            
+            if (!name || !email || !amount) {
+                alert('Please fill in all required fields');
+                return false;
+            }
+            
+            if (amount < 100) {
+                alert('Minimum donation amount is ₦100');
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // Pay with Paystack
+        function payWithPaystack() {
+            if (!validateDonationForm()) return;
+            
+            const name = document.getElementById('donor-name').value;
+            const email = document.getElementById('donor-email').value;
+            const amount = document.getElementById('donation-amount').value;
+            const phone = document.getElementById('donor-phone').value;
+            const purpose = document.getElementById('donation-purpose').value || 'General Donation';
+            
+            const paystack = new PaystackPop();
+            paystack.newTransaction({
+                key: PAYSTACK_PUBLIC_KEY,
+                email: email,
+                amount: amount * 100, // Convert to kobo
+                currency: 'NGN',
+                ref: 'ATF_' + Math.floor((Math.random() * 1000000000) + 1) + '_' + Date.now(),
+                
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Donor Name",
+                            variable_name: "donor_name",
+                            value: name
+                        },
+                        {
+                            display_name: "Purpose",
+                            variable_name: "purpose",
+                            value: purpose
+                        }
+                    ]
+                },
+                
+                onSuccess: (transaction) => {
+                    alert('Thank you for your generous donation! Reference: ' + transaction.reference);
+                    window.location.href = 'success.html';
+                },
+                
+                onClose: () => {
+                    console.log('Payment cancelled');
+                }
+            });
+        }
+        
+        // Pay with Flutterwave
+        function payWithFlutterwave() {
+            if (!validateDonationForm()) return;
+            
+            const name = document.getElementById('donor-name').value;
+            const email = document.getElementById('donor-email').value;
+            const amount = document.getElementById('donation-amount').value;
+            const phone = document.getElementById('donor-phone').value || '08000000000';
+            const purpose = document.getElementById('donation-purpose').value || 'General Donation';
+            
+            FlutterwaveCheckout({
+                public_key: FLUTTERWAVE_PUBLIC_KEY,
+                tx_ref: 'ATF_FLW_' + Date.now(),
+                amount: amount,
+                currency: 'NGN',
+                payment_options: 'card, banktransfer, ussd, mobilemoney',
+                redirect_url: window.location.origin + '/success.html',
+                
+                customer: {
+                    email: email,
+                    phone_number: phone,
+                    name: name
+                },
+                
+                meta: {
+                    donor_name: name,
+                    purpose: purpose
+                },
+                
+                customizations: {
+                    title: 'Ahmad Tijjani Foundation',
+                    description: 'Donation for ' + purpose,
+                    logo: ''
+                },
+                
+                callback: function(response) {
+                    console.log('Payment Response:', response);
+                    if (response.status === 'successful') {
+                        alert('Thank you for your generous donation! Transaction ID: ' + response.transaction_id);
+                        window.location.href = 'success.html';
+                    }
+                },
+                
+                onclose: function() {
+                    console.log('Payment cancelled');
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>
