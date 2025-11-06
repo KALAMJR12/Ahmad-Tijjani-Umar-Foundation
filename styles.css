@@ -352,15 +352,23 @@ ul {
 }
 
 .btn-outline {
-    background: transparent;
+    /*  background: transparent;
     color: var(--white);
-    border: 2px solid var(--white);
+    border: 2px solid var(--white); */
+   
+   background: var(--secondary-color);
+    color: var(--white);
+   
 }
 
 .btn-outline:hover {
-    background: var(--white);
+   /* background: var(--white);
     color: var(--primary-color);
+    transform: translateY(-2px);  */
+
+   background: var(--secondary-dark);
     transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .hero-buttons {
