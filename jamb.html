@@ -3,51 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAMB Practice Tests</title>
+    <title>JAMB 2026 - Practice Programs | Sheik Ahmad Tijjani Umar Foundation</title>
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <header>
-        <h1>Welcome to JAMB Practice Tests</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="donate.html">Donate</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
-                <li><a href="jamb.html">JAMB Practice Tests</a></li>
-            </ul>
+    <!-- HEADER AND NAVIGATION (identical to index.html) -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html#home"> Sheik Ahmad Tijjani Umar Foundation</a>
+                    </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="index.html#about" class="nav-link">About</a></li>
+                        <li><a href="index.html#programs" class="nav-link">Programs</a></li>
+                        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                        <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <div class="page-header">
-        <h2>JAMB Practice Programs</h2>
-        <p>Join our programs to prepare for JAMB effectively.</p>
-    </div>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>JAMB 2026 Preparation & Mock Tests</h1>
+        <p>Your hub for JAMB information, high-quality practice tests, and exam success tips for 2026.</p>
+    </section>
 
-    <div class="programs-grid">
-        <div class="program">
-            <h3>Mock Exams</h3>
-            <p>Take part in our realistic mock exams.</p>
+    <!-- JAMB PRACTICE PROGRAMS / MOCK TESTS -->
+    <section class="programs" style="padding-top:40px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">JAMB Practice Tests</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">
+                    Practice, prepare, and boost your confidence with our up-to-date JAMB mock tests and support resources.
+                </p>
+            </div>
+            <div class="programs-grid">
+                <!-- Program Card 1 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="program-title">Mock Test 1</h3>
+                    <p class="program-description">
+                        Timed, full-length simulated exam featuring 2026 JAMB-style questions in all major subjects.
+                    </p>
+                    <div class="program-status">Open</div>
+                    <a href="#" class="btn btn-secondary apply-btn">Start Test</a>
+                </div>
+                <!-- Program Card 2 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="program-title">Mock Test 2</h3>
+                    <p class="program-description">
+                        Another fresh set of practice questions. Understand your strengths and the areas to improve.
+                    </p>
+                    <div class="program-status">Open</div>
+                    <a href="#" class="btn btn-secondary apply-btn">Start Test</a>
+                </div>
+                <!-- Program Card 3 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="program-title">Subject Drills</h3>
+                    <p class="program-description">
+                        Focused drills for Maths, English, Physics, Chemistry, Biology, and more. Track your progress over time.
+                    </p>
+                    <div class="program-status">Open</div>
+                    <a href="#" class="btn btn-secondary apply-btn">Take a Drill</a>
+                </div>
+                <!-- Program Card 4 -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="program-title">Live Coaching Sessions</h3>
+                    <p class="program-description">
+                        Join group coaching and Q&A with certified teachers and top-scoring JAMB alumni.
+                    </p>
+                    <div class="program-status">Coming Soon</div>
+                    <a href="#" class="btn btn-secondary apply-btn" style="pointer-events:none;opacity:.6;">Not Yet Available</a>
+                </div>
+            </div>
         </div>
-        <div class="program">
-            <h3>Study Groups</h3>
-            <p>Connect with fellow students to study.</p>
-        </div>
-        <div class="program">
-            <h3>Online Resources</h3>
-            <p>Access a variety of online study materials.</p>
-        </div>
-        <div class="program">
-            <h3>Mentorship</h3>
-            <p>Get mentorship from successful candidates.</p>
-        </div>
-    </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Ahmad Tijjani Umar Foundation</p>
-        <p><a href="donate.html">Donate</a> | <a href="volunteer.html">Volunteer</a></p>
+    <!-- BENEFITS SECTION -->
+    <section class="about" style="padding-top:30px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Use Our JAMB Prep Platform?</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Expert Questions</h3>
+                    <p>All questions are carefully curated and up-to-date for the JAMB 2026 syllabus.</p>
+                    <h3>Performance Analytics</h3>
+                    <p>Detailed feedback after each mock—know your strong and weak subjects.</p>
+                    <h3>Exam Strategies</h3>
+                    <p>Built-in tips and strategies for time management and avoiding common pitfalls.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" alt="Students practicing for JAMB exam" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (identical structure to index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sheik Ahmad Tijjani Umar Foundation</h4>
+                    <p>Empowering youth and building sustainable communities through education and skills.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sheik Ahmad Tijjani Umar Foundation. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
